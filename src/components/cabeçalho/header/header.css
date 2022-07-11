@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* ZERANDO VALORES DOS NAVEGADORES */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+/* CRIANDO VARIAVEIS DO PROJETO */
+:root{
+  --cor-fundo-menu--:#0C0D0D;
+  --font-roboto--:"Roboto";
+  --cor-radio-select:#FF3BA5;
+}
+
+
+/* HEADER*/ 
+.header{
+  height:30rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(50% 0%, 100% 0, 100% 54%, 87% 57%, 65% 63%, 33% 70%, 0 77%, 0% 43%, 0 0);
+  background-image: linear-gradient(to right, #000,#000,rgba(255, 255, 255, 0.275));
+}
+/* Carrossel */
+.main-slide{
+  width: 100%;
+  height: 180%;
+}
+/* Imagem do carrossel */
+.main-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  opacity: .5;
+
+}
+
+/* titulo do header */
+.info-header{
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  position: absolute;
+  font-family: var(--font-roboto--);
+  left: 9rem;
+  top: 20rem;
+}
+/* container com inputs radio do arquivo do carrossel */
+.control-dots{
+  position: absolute;
+  top: 30rem;
+  left: 40rem;
+  display:flex;
+  gap: .2rem;
+}
+/* Tirando setas laterais do carrossel */
+.control-arrow {
+  display:none;
+}
+/* Tirando contador de imagens */
+.carousel-status {
+  display: none;
+}
+
+/* Responsividade */
+@media(max-width:1211px){
+  .control-dots{
+    top: 30rem;
+    left: 30rem;
+  }
+}
+
+@media(max-width:1000px){
+  .control-dots{
+    top: 27rem;
+    left: 30rem;
+  }
+}
+
+@media(max-width:895px){
+  .control-dots{
+    top: 22rem;
+    left: 25rem;
+  }
+}
+
+@media(max-width: 770px){
+  .info-header{
+    top: 15rem;
+    left: 5rem;
+  }
+}
+
+@media(max-width:697px){
+  .control-dots{
+    top: 20rem;
+    left: 23rem;
+  }
+}
+
+@media(max-width:625px){
+  .info-header{
+    top: 10rem;
+    left: 4rem;
+  }
+  .control-dots{
+    top: 18rem;
+    left: 20rem;
+  }
+}
+
+
+@media(max-width: 549px){
+
+  .main-slide{
+    width: 150%;
+  }
+
+  .info-header{
+    top: 15rem;
+    left: 10rem;
+  }
+  .control-dots{
+    top: 21rem;
+    left: 17rem;
+  }
+}
+
+
+@media(max-width: 420px){
+
+  .main-slide{
+    width: 150%;
+  }
+
+  .info-header{
+    top: 10rem;
+    left: 7rem;
+    font-size: 10px;
+  }
+  .control-dots{
+    top: 17rem;
+    left: 17rem;
+  }
+}
+
+@media(max-width: 346px){
+
+  .main-slide{
+    width: 200%;
+  }
+
+  .info-header{
+    top: 10rem;
+    left: 12rem;
+    font-size: 10px;
+  }
+  .control-dots{
+    top: 20rem;
+    left: 17rem;
+  }
+}
+
+@media(max-width: 306px){
+
+  .main-slide{
+    width: 250%;
+  }
+
+  .info-header{
+    top: 13rem;
+    left: 15rem;
+    font-size: 10px;
+  }
+  .control-dots{
+    top: 22rem;
+    left: 17rem;
+  }
+}
+

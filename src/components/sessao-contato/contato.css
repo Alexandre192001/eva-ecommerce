@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* ZERANDO VALORES DOS NAVEGADORES */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+/* CRIANDO VARIAVEIS DO PROJETO */
+:root{
+  --cor-fundo-contato--:#3C3E40;
+  --font-roboto--:"Roboto";
+  --cor-btn-enviar--:#FF3BA5;
+}
+/* sessao de contato */
+.sessao-contato{
+  height:23rem;
+  background-color: var(--cor-fundo-contato--) ;
+  display:flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+/* Imagem de envelope - PAI */
+.logo-envelope{
+  color: #fff;
+  font-size:20px;
+  font-weight: 400;
+  font-family:var(--font-roboto--);
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+/* Estilizando imagem */
+.logo-envelope img{
+  width: 40px;
+  margin: .4rem 0;
+}
+/* Formulario */
+.formulario{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+/* Inputs do formulario - PAI */
+.inputs-form{
+  display:flex;
+  justify-content: center;
+  gap: 1rem;
+}
+/* Estilizando input */
+.inputs-form input{
+  border: none;
+  width: 20rem;
+  border-radius: .3rem;
+  height:2rem;
+  margin:0;
+  padding:.4rem .4rem;
+  outline: none;
+  font-family: var(--font-roboto--);
+}
+/* Adicionando cor no placeholder */
+::placeholder{
+  color: #3C3E40;
+}
+/* Campo de nome do form */
+.campo-nome{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Caso estiver invalido o nome*/
+.campo-nome .name-error{
+  position: absolute;
+  top: -1rem;
+  z-index: 1; 
+  font-family:var(--font-roboto--);
+  color: #fff;
+  font-size: 13px;
+}
+/* Campo de email do form */
+.campo-email{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+/* Caso estiver invalido o email */
+.campo-email .email-error{
+  position: absolute;
+  top: -1rem;
+  z-index: 1; 
+  font-family:var(--font-roboto--);
+  color: #fff;
+  font-size: 13px;
+}
+
+/* Estilizando do botão de submit do form */
+.formulario input[type="submit"]{
+  font-family: var(--font-roboto--);
+  width: 15rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--cor-btn-enviar--);
+  padding: .5rem .5rem;
+  color: #fff;
+  border-radius: .5rem;
+  margin:4rem;
+}
+
+/* Responsividade */
+@media(max-width:661px){
+  .formulario .inputs-form{
+    flex-direction: column;
+  }
+  .paragrafo-logo{
+    text-align: center;
+  }
+  .formulario input[type="submit"]{
+    margin:1rem;
+  }
+}
+
+@media(max-width:335px){
+  .formulario .inputs-form input{
+   width: 90%;
+  }
+  .formulario input[type="submit"]{
+    margin:1rem;
+    width: 90%;
+  }
+}

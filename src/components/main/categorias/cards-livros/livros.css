@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* ZERANDO VALORES DOS NAVEGADORES */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+/* CRIANDO VARIAVEIS DO PROJETO */
+:root{
+  --font-roboto--:"Roboto";
+  --cor-info:#FF3BA5;
+}
+/* Sessão de livros */
+.sessao-livros-wrapper{
+  width: 100%;
+  height: 30rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* Titulo da sessão */
+.sessao-livros-wrapper .titulo-sessao{
+  font-family: var(--font-roboto--);
+  font-size:20px;
+  margin: 0 5.5rem;
+  position: relative;
+} 
+/* Colocando linha a cima do titulo */
+.titulo-sessao:before{
+  content:"";
+  width: 3.3rem;
+  height:.2rem;
+  background-color:var(--cor-info);
+  position: absolute;
+}
+/* Carrossel */
+.carrossel-livros-wrapper{
+  width: 85%;
+  position: absolute;
+  display:flex;
+  left: 5.5rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+/* Cards com os dados */
+.card-livros{
+  position: relative;
+  overflow: hidden;
+  width: 18.5rem;
+  height:23rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  transition: all .1s ease-in-out;
+  flex: none;
+}
+/* Animação quando o mouse passar sobre o card */
+.card-livros:hover{
+  border: solid 2px var(--cor-info);
+  border-radius: .4rem;
+  height:26rem;
+}
+/* Estilizando imagem do card */
+.card-livros img{
+  position: relative;
+  top: -1.5rem;
+  height:60%;
+  width: 90%;
+  object-fit: cover;
+}
+/* Estilizando texto do card */
+.info-card p {
+  font-family: var(--font-roboto--);
+}
+/* container de dados */
+.info-card{
+  display:flex;
+  flex-direction: column;
+}
+/* Avaliação do produto */
+.titulo-card, .avaliacao-produto{
+  position: relative;
+  top: -1rem;
+  font-size:13px ;
+}
+/* Preço antigo - produto */
+.info-card .preco-antigo{
+  text-decoration:line-through;
+  font-size: 10px;
+  position: absolute;
+  right: 4rem;
+  bottom: 5.5rem;
+}
+/* Preço novo */
+.info-card .preco-novo{
+  color: var(--cor-info);
+  font-size: 30px;
+  font-weight:900;
+}
+/* Preço pelo boleto */
+.info-card .preco-boleto{
+  font-size: 10px;
+  font-weight: 700;
+}
+/* Botão de comprar */
+.info-card .btn-comprar{
+  position: absolute;
+  bottom: -10rem;
+  border: none;
+  right: 1rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+  background-color: var(--cor-info);
+  width: 15rem;
+  padding: .5rem .4rem;
+  font-family: var(--font-roboto--);
+  border-radius: .4rem;
+  transition: all .1s ease-in-out;
+}
+
+/* animação quando focar no card o btn aparecer */
+.card-livros:hover .btn-comprar{
+  bottom:0.3rem;
+}
+/* Setas do carrossel */
+.container-setas-livros{
+  position: relative;
+  top: 10rem;
+  display:flex;
+  justify-content:space-between;
+}
+
+/* Criando seta LEFT */
+.seta-carrossel-left-livros .setacima{
+  width: 1.5rem;
+  height: .1px;
+  transform: rotateZ(-40deg);
+  background-color: #FF3BA5;
+}
+
+.seta-carrossel-left-livros .setabaixo{
+  width: 1.5rem;
+  height: .1px;
+  transform: translateY(1rem) rotateZ(40deg);
+  background-color: #FF3BA5;
+}
+
+/* Criando seta right */
+.seta-carrossel-right-livros .setacima{
+  width: 1.5rem;
+  height: .1px;
+  transform: rotateZ(-143deg);
+  background-color: #FF3BA5;
+}
+
+.seta-carrossel-right-livros .setabaixo{
+  width: 1.5rem;
+  height: .1px;
+  transform: translateY(.9rem) rotateZ(143deg);
+  background-color: #FF3BA5;
+}
+/* Responsividade */
+@media(max-width:397px){
+
+  .carrossel-livros-wrapper{
+    width: 70%;
+    left: 4rem;
+  }
+}
+
+@media(max-width:360px){
+
+  .carrossel-livros-wrapper{
+    width: 80%;
+    left: 2rem;
+  }
+}

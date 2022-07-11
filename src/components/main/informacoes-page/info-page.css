@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* ZERANDO VALORES DOS NAVEGADORES */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+/* CRIANDO VARIAVEIS DO PROJETO */
+:root{
+  --cor-fundo-menu--:#0C0D0D;
+  --font-roboto--:"Roboto";
+  --cor-icones-info:#FF3BA5;
+}
+/* Container com as informações da sessão */
+.info-main-wrapper{
+  position: relative;
+  top: -4rem;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 10rem;
+}
+/* Card de informação */
+.info-main{
+  color: var(--cor-icones-info);
+  font-family: var(--font-roboto--);
+  font-size:13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  position: relative;
+}
+/* Adicionando linha do lado dos elementos */
+.info-main::before{
+  content: "";
+  position: absolute;
+  width: .1rem;
+  left: 10rem;
+  background-color: #DADFEB;
+  height: 5rem;
+
+}
+/* Estilizando imagem */
+.info-main img{
+  width: 40px;
+}
+
+/* Responsividade */
+@media(max-width:895px){
+
+  .info-main{
+    font-size:8px;
+  }
+
+}
+
+@media(max-width:660px){
+
+  .info-main-wrapper{
+    gap: 5rem;
+  }
+
+  .info-main img{
+    width:30px
+  }
+
+  .info-main::before{
+  left: 6rem;
+}
+}
+
+@media(max-width:370px){
+  .info-main-wrapper{
+    gap: 1.5rem;
+  }
+
+  .info-main{
+    font-size: 10px;
+  }
+
+  .info-main img{
+    width:20px;
+  }
+
+  .info-main::before{
+  width: 0;
+}
+}
